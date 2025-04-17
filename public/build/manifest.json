@@ -61,12 +61,12 @@
     "src": "resources/fonts/static/Inter-Thin.ttf"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CV1k-CDj.js",
+    "file": "assets/app-BPHc93Un.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-BwTEI9pf.css"
+      "assets/app-B2Xdr2qf.css"
     ],
     "assets": [
       "assets/logo-DWw-wN7w.svg",

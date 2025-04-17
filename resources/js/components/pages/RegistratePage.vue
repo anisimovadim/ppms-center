@@ -39,18 +39,16 @@ export default {
             }, {});
 
             axios.post('/api/auth/login', user)
-                .then(res=>{
-                    this.$store.commit('setAccessToken', res.data.access_token);
+                .then(res => {
+                    const token = res.data.access_token;
+                    this.$store.commit('setAccessToken', token);
+
+                    // Устанавливаем токен в заголовок по умолчанию
+                    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
                     this.$router.push('/admin/page');
                 })
-                .catch(err=>{
-                    this.validateErrors = err.response.data.errors
-                    setTimeout(()=>{
-                        this.validateErrors=[]
-                    }, 5000)
-                    console.log(this.validateErrors)
-                })
-            console.log(user)
+
         },
     }
 }

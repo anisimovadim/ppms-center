@@ -11,7 +11,7 @@
                 <div class="block-items">
                     <div class="item" v-for="teacher in teachers">
                         <div class="image">
-                            <img :src="teacher.image" alt="">
+                            <img :src="`/${teacher.image}`" alt="">
                         </div>
                         <div class="info">
                             <p>{{ teacher.lastName }} {{ teacher.name }} {{ teacher.patronymic }}</p>
